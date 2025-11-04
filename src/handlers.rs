@@ -5,6 +5,7 @@ use solana_program::{
 };
 
 use crate::state::NotesState;
+use crate::utils::assert_owner_program;
 
 pub fn process_initialise_instruction(
     program_id: &Pubkey,

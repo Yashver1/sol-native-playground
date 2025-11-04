@@ -4,11 +4,15 @@ use solana_program::{
     pubkey::Pubkey,
 };
 
-use crate::{handlers::process_initialise_instruction, instructions::NotesInstructions};
+use crate::{
+    handlers::process_initialise_instruction, instructions::NotesInstructions,
+    utils::assert_owner_program,
+};
 
 pub mod handlers;
 pub mod instructions;
 pub mod state;
+pub mod utils;
 
 entrypoint!(process_instruction);
 
